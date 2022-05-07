@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<launch>
+  <!-- include file="$(find cbot_control)/launch/cmd_vel_mux.launch"/ -->
+  <node pkg="hg_yolo_faster" type="usb_cam_ros.py" name="usb_cam_ros" output="screen" >
+
+    <param name="model_data" value="$(find hg_yolo_faster)/data/object.data"/>
+    <param name="model_weights" value="$(find hg_yolo_faster)/modelzoo/0.201002-2608-epoch-0.914787ap-model.pth"/>
+    <param name="video_cam" value="2"/>
+
+  </node>
+</launch>

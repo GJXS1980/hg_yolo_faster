@@ -1,0 +1,23 @@
+[name]
+model_name=object
+
+[train-configure]
+epochs=300000
+steps=150000,250000
+batch_size=64
+subdivisions=2
+learning_rate=0.001
+
+[model-configure]
+pre_weights=None
+classes=3
+width=640
+height=640
+anchor_num=3
+anchors=39.78,82.51, 50.30,115.19, 54.25,94.11, 59.89,140.40, 73.98,160.95, 89.36,192.25
+
+
+[data-configure]
+train=/home/grantli/test/src/hg_yolo_faster/img_data/train.txt
+val=/home/grantli/test/src/hg_yolo_faster/img_data/val.txt
+names=/home/grantli/test/src/hg_yolo_faster/data/object.names
